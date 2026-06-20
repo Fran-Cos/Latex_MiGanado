@@ -1,0 +1,80 @@
+\chapter{Descripci\'on}\label{chapter:descripcion}
+
+\section{Descripci\'on general de la soluci\'on}
+
+MiGanado consiste en una aplicaci\'on web orientada a centralizar la gesti\'on de establecimientos bovinos dedicados a la cr\'ia para venta. La plataforma permitir\'a registrar animales, consultar su historial, administrar lotes, organizar establecimientos, planificar actividades sanitarias y reproductivas, y generar informaci\'on de apoyo para decisiones productivas y econ\'omicas.
+
+El sistema se concibe como una herramienta colaborativa para distintos perfiles de usuario. Productores, due\~nos, administradores, veterinarios y empleados de campo podr\'an acceder a la informaci\'on de acuerdo con permisos definidos. De este modo, un veterinario podr\'a consultar los establecimientos en los que trabaje, mientras que un administrador podr\'a gestionar usuarios, lotes y reportes dentro de su \'ambito de responsabilidad.
+
+\section{Usuarios previstos}
+
+\subsection{Productores y due\~nos}
+
+Los productores y due\~nos requieren una visi\'on consolidada del establecimiento, con acceso a indicadores productivos, sanitarios, reproductivos y econ\'omicos. Para este perfil, MiGanado deber\'a facilitar la toma de decisiones y la planificaci\'on de actividades.
+
+\subsection{Administradores}
+
+Los administradores tendr\'an a su cargo la organizaci\'on operativa de campos, lotes, usuarios y registros. Este perfil necesita herramientas para mantener actualizada la informaci\'on y controlar que las tareas planificadas se cumplan en tiempo y forma.
+
+\subsection{Veterinarios}
+
+Los veterinarios acceder\'an a datos sanitarios y reproductivos de los animales, incluyendo vacunaciones, tratamientos, tactos, sangrados y seguimiento cl\'inico. El sistema deber\'a permitirles consultar historiales y registrar intervenciones de manera ordenada.
+
+\subsection{Empleados de campo}
+
+Los empleados de campo participar\'an en la carga y consulta de informaci\'on operativa. Para este perfil, la interfaz deber\'a ser clara, r\'apida y resistente a errores frecuentes de carga, dado que puede utilizarse en contextos de trabajo con conectividad o tiempo limitados.
+
+\input{tables/roles_table.tex}
+
+\section{M\'odulos funcionales}
+
+\subsection{Registro individual de animales}
+
+El m\'odulo de animales permitir\'a registrar informaci\'on individual asociada al n\'umero de caravana. Entre los datos previstos se incluyen raza, edad, peso, lote, estado sanitario, vacunas, tratamientos, sangrados, estado reproductivo y observaciones relevantes.
+
+\subsection{Organizaci\'on por lotes y establecimientos}
+
+La plataforma permitir\'a administrar m\'ultiples campos dentro de una misma cuenta. Cada establecimiento podr\'a organizar animales por lotes, lo que facilitar\'a el seguimiento de grupos productivos y la asignaci\'on de actividades.
+
+\subsection{Gesti\'on sanitaria y reproductiva}
+
+El sistema incluir\'a registro de vacunaciones, tratamientos, tactos, sangrados, controles veterinarios y otros eventos sanitarios o reproductivos. Estos datos permitir\'an construir un historial individual y grupal del rodeo.
+
+\subsection{Calendario y alertas}
+
+El calendario sanitario automatizado permitir\'a planificar actividades y generar alertas asociadas a vacunaciones, controles, tratamientos o seguimientos pendientes. Esta funcionalidad busca reducir omisiones y mejorar la organizaci\'on del establecimiento.
+
+\subsection{Indicadores y estad\'isticas}
+
+MiGanado generar\'a indicadores productivos y estad\'isticas a partir de los datos registrados. En esta etapa se prev\'en reportes preliminares sobre evoluci\'on de peso, estado sanitario, distribuci\'on por lotes, eventos reproductivos y cumplimiento de actividades.
+
+\subsection{An\'alisis predictivo y detecci\'on de anomal\'ias}
+
+El sistema incorporar\'a herramientas de inteligencia artificial orientadas a generar estimaciones sobre peso, pre\~nez y salud animal, adem\'as de detectar situaciones at\'ipicas. Esta funcionalidad depender\'a de la calidad, volumen y trazabilidad de los datos disponibles, por lo que su alcance deber\'a validarse con criterios t\'ecnicos durante el desarrollo.
+
+\subsection{Chatbot inteligente}
+
+El chatbot permitir\'a realizar consultas r\'apidas, acceder a informaci\'on del sistema y obtener asistencia automatizada. Su objetivo ser\'a complementar la navegaci\'on tradicional, no reemplazar el criterio profesional de productores o veterinarios.
+
+\subsection{M\'odulo econ\'omico}
+
+El m\'odulo econ\'omico utilizar\'a informaci\'on registrada en el sistema para proyectar costos, ganancias y escenarios productivos. Esta funcionalidad se orientar\'a a mejorar la planificaci\'on del establecimiento y a anticipar decisiones con impacto econ\'omico.
+
+\section{User Research}
+
+\subsection{Encuesta sobre gesti\'on ganadera}
+
+Se prev\'e realizar una encuesta a productores, veterinarios, administradores y personas vinculadas con establecimientos bovinos de cr\'ia. La encuesta deber\'a relevar pr\'acticas actuales de registro, herramientas utilizadas, problemas frecuentes, disposici\'on a adoptar una plataforma digital y valor percibido de funcionalidades como alertas, IA, chatbot y proyecciones econ\'omicas.
+
+\subsection{Entrevistas a usuarios del dominio}
+
+Se prev\'e realizar entrevistas semiestructuradas a actores del sector agropecuario. El objetivo ser\'a validar supuestos de negocio, identificar vocabulario propio del dominio, conocer flujos de trabajo reales y ajustar los requerimientos funcionales del prototipo.
+
+\subsection{User Persona}
+
+La definici\'on de \emph{user persona} queda pendiente hasta contar con evidencia de entrevistas o encuestas. De manera preliminar, se identifican al menos cuatro perfiles: productor o due\~no, administrador de campo, veterinario y empleado operativo.
+
+\section{Diagramas preliminares}
+
+\input{figures/architecture_placeholder.tex}
+\input{figures/workflow_placeholder.tex}

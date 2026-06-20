@@ -1,0 +1,168 @@
+% oneside para una impresion simple.
+% titlepage define que vamos a tener una portada.
+% openany para que los capitulos empiecen en cualquier pagina.
+\documentclass[a4paper, 12pt, oneside, titlepage, openany]{book}
+
+\usepackage{titlesec}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage[backend=biber, style=iso-authoryear, language=spanish]{biblatex}
+\DeclareUnicodeCharacter{202F}{~}
+\bibliography{biblio.bib}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\DeclareFieldFormat{urldate}{\mkbibbrackets{consultado\space#1}}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{framed}
+\usepackage[section,above,below]{placeins}
+\usepackage{microtype}
+\usepackage{anyfontsize}
+\usepackage{enumitem}
+\renewcommand{\labelitemii}{\textasteriskcentered}
+\renewcommand{\labelitemiii}{-}
+\usepackage{lastpage}
+\usepackage{titleps}
+\usepackage{textcase}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+
+\newpagestyle{ruled}{
+	\sethead{\textbf{UADE}}
+			{\parbox[b]{0.43\textwidth}{\raggedright\MakeUppercase{MiGanado}}}
+			{
+				\raisebox{1.5ex}{%
+					\parbox[b]{0.28\textwidth}{\raggedleft
+					\begin{tabular}{r}
+						Cosentino, Francisco \\
+						Migueltorena, Lara
+					\end{tabular}
+					}
+				}
+			}\headrule{}
+	\setfoot[][][P\'agina \thepage\ de~\pageref*{LastPage}]{}{}{P\'agina \thepage\ de~\pageref*{LastPage}}\footrule{}
+}
+\pagestyle{ruled}
+
+\makeatletter
+\let\ps@plain\ps@ruled
+\makeatother
+
+\usepackage{vmargin}
+\setmarginsrb{2.7cm}{2cm}{2.3cm}{1.5cm}{0cm}{2cm}{0cm}{1cm}
+
+\renewcommand{\thetable}{\thechapter.\Roman{table}}
+\setlength{\textfloatsep}{5pt}
+
+\usepackage{todonotes}
+\setlength{\marginparwidth}{2cm}
+\newcommand{\Pendiente}[1]{\todo[color=yellow!30,inline]{\textbf{Pendiente:} #1}}
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}
+  {\settowidth}
+  {\setlength{\itemsep}{6pt}\settowidth}
+  {}{}
+\apptocmd{\thebibliography}
+  {\small}
+  {}{}
+
+% Comentar pdfcomment antes de la entrega final si no se usan comentarios.
+\usepackage{pdfcomment}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{csquotes}
+\addto\captionsspanish{
+	\renewcommand{\contentsname}{\'Indice}
+	\renewcommand{\listfigurename}{Lista de Figuras}
+	\renewcommand{\listtablename}{Lista de Tablas}
+	\renewcommand{\tablename}{TABLA}
+}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{36pt}
+
+\usepackage{multicol,multirow}
+\usepackage{array,longtable}
+\usepackage{mathptmx}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\allowdisplaybreaks{}
+\usepackage{cancel}
+\usepackage{setspace}
+\onehalfspacing
+
+\input{config/symbols}
+
+\usepackage[normalem]{ulem}
+
+\titleformat{\chapter}
+  {\bfseries\fontsize{14pt}{14pt}\selectfont}
+  {\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{12pt}{6pt}
+
+\titleformat{\section}
+  {\bfseries\fontsize{14pt}{14pt}\selectfont}
+  {\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+\titleformat{\subsection}
+  {\bfseries\fontsize{14pt}{14pt}\selectfont}
+  {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+
+\titleformat{\subsubsection}
+  {\bfseries\fontsize{14pt}{14pt}\selectfont}
+  {\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{12pt}{6pt}
+
+\usepackage{tocloft}
+\cftsetindents{table}{0em}{4em}
+\renewcommand{\cfttoctitlefont}{\bfseries\fontsize{14pt}{16pt}\selectfont}
+\setlength{\cftbeforetoctitleskip}{12pt}
+\setlength{\cftaftertoctitleskip}{6pt}
+\renewcommand{\cftloftitlefont}{\bfseries\fontsize{14pt}{16pt}\selectfont}
+\renewcommand{\cftlottitlefont}{\bfseries\fontsize{14pt}{16pt}\selectfont}
+\setlength{\cftbeforeloftitleskip}{12pt}
+\setlength{\cftafterloftitleskip}{6pt}
+\setlength{\cftbeforelottitleskip}{12pt}
+\setlength{\cftafterlottitleskip}{6pt}
+
+% IMPORTANTE: En la entrega final de UADE se debe dejar sin color.
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=red,
+    linkcolor=red,
+    urlcolor=red
+}
+
+\DefineBibliographyStrings{spanish}{
+  online   = {En l\'inea},
+  urlfrom  = {Disponible en:},
+  andothers = {\mkbibemph{et\addabbrvspace al\adddot}}
+}
+
+\begin{document}
+	\input{chapters/title}
+	\input{chapters/acknowledgments}
+	\newpage
+	% No se incluyen resumen ni abstract en esta etapa, segun el README de la catedra.
+	\tableofcontents
+	\input{chapters/chapter01}
+	\input{chapters/chapter02}
+	\input{chapters/chapter03}
+	\input{chapters/chapter04}
+	\input{chapters/conclusion}
+
+	\addcontentsline{toc}{chapter}{Bibliograf\'ia}
+	\printbibliography{}
+
+	\appendix
+	\input{chapters/appendix/annex}
+	\newpage
+	\listoffigures
+	\newpage
+	\listoftables
+\end{document}

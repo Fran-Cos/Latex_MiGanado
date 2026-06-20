@@ -1,0 +1,21 @@
+\renewcommand{\appendixname}{Anexo}
+\renewcommand{\thechapter}{\Alph{chapter}}
+
+\newcommand{\initappendix}{%
+  \addcontentsline{toc}{chapter}{Anexo}%
+}
+
+\newcommand{\anexo}[1]{%
+  \refstepcounter{chapter}%
+  \chapter*{Anexo \thechapter: #1}%
+  \addcontentsline{toc}{section}{Anexo \thechapter: #1}%
+  \markboth{Anexo \thechapter: #1}{}%
+}
+
+\initappendix
+
+\input{chapters/appendix/schedule_of_activities.tex}
+\input{chapters/appendix/surveys.tex}
+\input{chapters/appendix/interviews.tex}
+\input{chapters/appendix/glossary.tex}
+\input{chapters/appendix/proposal_notes.tex}

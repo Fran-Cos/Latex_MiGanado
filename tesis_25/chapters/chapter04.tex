@@ -1,0 +1,37 @@
+\chapter{Metodolog\'ia de desarrollo}\label{chapter:metodologia}
+
+\section{Metodolog\'ia}
+
+El desarrollo de MiGanado se abordar\'a mediante una metodolog\'ia iterativa e incremental. Esta elecci\'on resulta adecuada para un proyecto de software con requerimientos funcionales diversos, validaci\'on progresiva con usuarios del dominio y componentes t\'ecnicos que requieren experimentaci\'on, como los modelos de inteligencia artificial y el chatbot.
+
+El trabajo se organizar\'a en etapas. En primer lugar, se relevar\'an necesidades del dominio y se definir\'an requerimientos funcionales y no funcionales. Luego se dise\~nar\'a la arquitectura, el modelo de datos y los flujos principales. Posteriormente se implementar\'an los m\'odulos centrales de gesti\'on ganadera, roles, establecimientos y calendario. Finalmente, se integrar\'an los componentes de an\'alisis, asistencia inteligente y validaci\'on del prototipo.
+
+\section{Arquitectura y tecnolog\'ias utilizadas}
+
+La arquitectura prevista ser\'a web, con separaci\'on entre interfaz de usuario, l\'ogica de negocio, persistencia de datos y servicios inteligentes. El sistema deber\'a permitir autenticaci\'on, control de permisos, administraci\'on multiestablecimiento y consulta eficiente de historiales individuales. La Figura~\ref{fig:architecture} presenta un placeholder del esquema que deber\'a reemplazarse por el diagrama definitivo.
+
+\subsection{Capa de presentaci\'on}
+
+La capa de presentaci\'on ofrecer\'a las vistas para gestionar animales, lotes, calendarios, establecimientos, usuarios, reportes y consultas al chatbot. La interfaz deber\'a priorizar claridad, eficiencia y baja fricci\'on en tareas frecuentes.
+
+\subsection{Capa de aplicaci\'on}
+
+La capa de aplicaci\'on concentrar\'a reglas de negocio, validaciones, generaci\'on de alertas, administraci\'on de permisos y coordinaci\'on con servicios de inteligencia artificial. Tambi\'en expondr\'a las operaciones necesarias para registrar eventos sanitarios, reproductivos y econ\'omicos.
+
+\subsection{Capa de datos}
+
+La capa de datos almacenar\'a establecimientos, usuarios, roles, animales, lotes, eventos sanitarios, eventos reproductivos, mediciones, alertas, costos y reportes. El dise\~no deber\'a asegurar trazabilidad de las modificaciones y consistencia entre entidades.
+
+\subsection{Servicios de inteligencia artificial}
+
+Los servicios de inteligencia artificial se dise\~nar\'an como componentes acoplados de forma controlada al sistema principal. Esta separaci\'on permitir\'a evolucionar modelos, criterios de predicci\'on y fuentes de datos sin afectar la operaci\'on b\'asica de gesti\'on. Queda pendiente definir formalmente datasets, variables, m\'etricas y criterios de validaci\'on.
+
+\section{Validaci\'on del sistema}
+
+La validaci\'on del sistema se realizar\'a en distintos niveles. En el nivel funcional, se verificar\'a que los usuarios puedan registrar animales, consultar historiales, administrar establecimientos, gestionar eventos sanitarios y reproductivos, configurar alertas y acceder a reportes. En el nivel de usabilidad, se evaluar\'a la claridad de los flujos principales con usuarios representativos del dominio. En el nivel t\'ecnico, se validar\'a la persistencia de datos, el control de permisos, la consistencia de reglas de negocio y el comportamiento de los componentes inteligentes.
+
+Para las funcionalidades predictivas, la validaci\'on deber\'a contemplar la procedencia de los datos, la separaci\'on entre datos de entrenamiento y prueba, la interpretabilidad de los resultados y las limitaciones de uso. Las recomendaciones generadas por el sistema deber\'an presentarse como apoyo a la decisi\'on y no como diagn\'osticos veterinarios autom\'aticos.
+
+\section{Cronograma preliminar}
+
+El cronograma de actividades se incluir\'a como anexo y deber\'a actualizarse durante el avance del proyecto. En esta versi\'on se deja una estructura preliminar basada en etapas de relevamiento, dise\~no, implementaci\'on, validaci\'on y documentaci\'on final.
