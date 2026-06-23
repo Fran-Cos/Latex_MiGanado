@@ -100,7 +100,7 @@ El índice debe mostrar hasta **4 niveles de profundidad** (configurado en el te
    - **Alcance**
      - Características del prototipo funcional *(puede variar el nombre)*
      - Limitaciones y exclusiones
-     - Estructura del documento
+     - Estructura del documentora el 
 
 2. **Antecedentes**
    - **Marco Teórico**

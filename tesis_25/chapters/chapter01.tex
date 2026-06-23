@@ -1,8 +1,8 @@
 \chapter{Introducci\'on}\label{chapter:introduccion}
 
-MiGanado es un Proyecto Final de Ingenier\'ia orientado al desarrollo de una plataforma para la gesti\'on integral de establecimientos bovinos de cr\'ia para la venta. La propuesta surge a partir de una problem\'atica frecuente en la administraci\'on ganadera: la existencia de registros dispersos, anotaciones manuales, planillas aisladas y procesos dependientes de la experiencia informal de productores, veterinarios y empleados de campo. En establecimientos con rodeos numerosos, esta forma de trabajo puede provocar errores de carga, demoras en la consulta de informaci\'on, p\'erdida de antecedentes sanitarios y dificultades para planificar decisiones productivas.
+MiGanado es un Proyecto Final de Ingenier\'ia orientado al desarrollo de una plataforma para la gesti\'on integral de establecimientos bovinos de cr\'ia para la venta. El proyecto surge a partir de una problem\'atica frecuente en la administraci\'on ganadera: la existencia de registros dispersos, anotaciones manuales, planillas aisladas y procesos dependientes de la experiencia informal de productores, veterinarios y empleados de campo. En establecimientos con rodeos numerosos, esta forma de trabajo puede provocar errores de carga, demoras en la consulta de informaci\'on, p\'erdida de antecedentes sanitarios y dificultades para planificar decisiones productivas.
 
-El proyecto se ubica dentro de la categor\'ia de desarrollo, dado que busca obtener un producto funcional novedoso aplicado al sector agropecuario. En particular, se propone una aplicaci\'on web que centralice la informaci\'on individual de cada animal, organice la gesti\'on por lotes y establecimientos, facilite el seguimiento sanitario y reproductivo, y brinde herramientas de asistencia para la toma de decisiones mediante inteligencia artificial, detecci\'on temprana de anomal\'ias, an\'alisis predictivo y un m\'odulo econ\'omico.
+El proyecto se ubica dentro de la categor\'ia de desarrollo, dado que busca obtener un producto funcional aplicado al sector agropecuario. En particular, se propone una aplicaci\'on mobile que centralice la informaci\'on individual de cada animal, organice la gesti\'on por lotes y establecimientos, facilite el seguimiento sanitario y reproductivo, y brinde herramientas de asistencia para la toma de decisiones mediante inteligencia artificial, detecci\'on temprana de anomal\'ias, an\'alisis predictivo y un m\'odulo econ\'omico.
 
 La primera etapa del sistema se acota a establecimientos bovinos de cr\'ia para la venta ubicados en la provincia de Buenos Aires, Argentina. Esta decisi\'on responde a la diversidad de condiciones productivas, clim\'aticas y territoriales existentes en el pa\'is, y permite delimitar un contexto inicial sobre el cual obtener referencias, validar reglas de negocio y construir un prototipo coherente con el conocimiento disponible. No obstante, el dise\~no conceptual contempla la posibilidad de extender la soluci\'on a otras regiones en trabajos futuros.
 
@@ -10,7 +10,7 @@ La primera etapa del sistema se acota a establecimientos bovinos de cr\'ia para 
 
 \subsection{Objetivo general}
 
-El objetivo general del proyecto es desarrollar una plataforma web orientada a la gesti\'on integral del ganado bovino de cr\'ia para la venta, que permita digitalizar y centralizar informaci\'on productiva, sanitaria, reproductiva y econ\'omica de los animales y establecimientos. La soluci\'on buscar\'a mejorar el acceso a los datos por parte de productores, veterinarios, administradores y empleados, incorporando adem\'as herramientas de monitoreo, alertas autom\'aticas, an\'alisis predictivo, detecci\'on de anomal\'ias, asistencia conversacional y proyecciones econ\'omicas.
+El objetivo general del proyecto es desarrollar una aplicaci\'on mobile orientada a la gesti\'on integral del ganado bovino de cr\'ia para la venta, que permita digitalizar y centralizar informaci\'on productiva, sanitaria, reproductiva y econ\'omica de los animales y establecimientos. La soluci\'on buscar\'a mejorar el acceso a los datos por parte de productores, veterinarios, administradores y empleados, incorporando adem\'as herramientas de monitoreo, alertas autom\'aticas, an\'alisis predictivo, detecci\'on de anomal\'ias, asistencia conversacional y proyecciones econ\'omicas.
 
 \subsection{Objetivos espec\'ificos}
 
@@ -30,22 +30,25 @@ Los objetivos espec\'ificos del proyecto son:
     \item Desarrollar un m\'odulo econ\'omico que permita proyectar costos, ganancias y escenarios productivos.
 \end{itemize}
 
+Definidos los objetivos del proyecto, resulta necesario precisar los l\'imites de la entrega y el tipo de producto que se desarrollar\'a. El alcance que se presenta a continuaci\'on delimita las funcionalidades incluidas en el prototipo, las exclusiones consideradas y las condiciones bajo las cuales se evaluar\'a la soluci\'on propuesta.
+
 \section{Alcance}
 
 \subsection{Caracter\'isticas del prototipo funcional}
 
-El alcance comprende el desarrollo de un prototipo funcional de una aplicaci\'on web para la gesti\'on integral de establecimientos bovinos dedicados a la cr\'ia para venta. La entrega final del proyecto consistir\'a en una aplicaci\'on operativa con funcionalidades utilizables en un entorno real o representativo del dominio.
+El alcance comprende el desarrollo de un prototipo funcional de una aplicaci\'on mobile para la gesti\'on integral de establecimientos bovinos dedicados a la cr\'ia para venta. La entrega final del proyecto consistir\'a en una aplicaci\'on operativa con funcionalidades utilizables en un entorno real o representativo del dominio.
 
 El prototipo incluir\'a registro individual de animales, consulta por caravana, organizaci\'on por lotes, gesti\'on sanitaria, gesti\'on reproductiva, calendario de vacunaci\'on, seguimiento veterinario, soporte multiestablecimiento, perfiles de usuario, estad\'isticas, indicadores productivos y funcionalidades iniciales de inteligencia artificial. Tambi\'en se prev\'e un m\'odulo econ\'omico para proyectar costos, ganancias y escenarios, de acuerdo con la informaci\'on registrada.
-
-\input{tables/scope_table.tex}
 
 \subsection{Limitaciones y exclusiones}
 
 El sistema estar\'a orientado exclusivamente a bovinos de cr\'ia para la venta. Quedan fuera del alcance otros tipos de animales y explotaciones bovinas dedicadas a la producci\'on tambera. Tambi\'en se excluyen el dise\~no, provisi\'on y mantenimiento de hardware, incluidos chips electr\'onicos, caravanas electr\'onicas, bastones de lectura Bluetooth y software propietario asociado. La plataforma podr\'a procesar informaci\'on capturada por medios externos, pero no desarrollar\'a ni controlar\'a dichos dispositivos.
 
-Las funcionalidades de inteligencia artificial se implementar\'an como componentes preliminares del prototipo. La propuesta aprobada menciona el uso de datasets y la mejora progresiva con datos reales de productores; sin embargo, la curadur\'ia, procedencia y validaci\'on formal de esos conjuntos de datos deber\'an completarse durante el desarrollo y documentarse antes de la entrega final.
+Las funcionalidades de inteligencia artificial se implementar\'an como componentes preliminares del prototipo. En esta entrega no se define todav\'ia un dataset definitivo para entrenamiento o evaluaci\'on; por lo tanto, el documento explicita esta limitaci\'on y reserva para las pr\'oximas etapas la selecci\'on, curadur\'ia, procedencia, variables y validaci\'on formal de los conjuntos de datos que eventualmente se utilicen. Hasta contar con esa definici\'on, las predicciones y alertas inteligentes se describen como alcance previsto y no como resultados ya validados.
 
 \subsection{Estructura del documento}
 
 El presente documento se organiza en cinco secciones principales. La Secci\'on~\ref{chapter:introduccion} presenta la introducci\'on, objetivos y alcance del proyecto. La Secci\'on~\ref{chapter:antecedentes} desarrolla los antecedentes, el marco te\'orico y el estado del arte. La Secci\'on~\ref{chapter:descripcion} describe la soluci\'on propuesta, los usuarios, los m\'odulos funcionales y los principales requerimientos. La Secci\'on~\ref{chapter:metodologia} expone la metodolog\'ia de desarrollo, la arquitectura prevista, las tecnolog\'ias y la estrategia de validaci\'on. Finalmente, la Secci\'on~\ref{chapter:conclusion} presenta las conclusiones preliminares, aportes esperados y trabajo futuro.
+
+\input{tables/scope_table.tex}
+\FloatBarrier

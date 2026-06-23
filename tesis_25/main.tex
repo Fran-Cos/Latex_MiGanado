@@ -18,6 +18,7 @@
 
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{framed}
+\usepackage{float}
 \usepackage[section,above,below]{placeins}
 \usepackage{microtype}
 \usepackage{anyfontsize}
@@ -162,7 +163,9 @@
 	\appendix
 	\input{chapters/appendix/annex}
 	\newpage
+	\addcontentsline{toc}{chapter}{Lista de Figuras}
 	\listoffigures
 	\newpage
+	\addcontentsline{toc}{chapter}{Lista de Tablas}
 	\listoftables
 \end{document}

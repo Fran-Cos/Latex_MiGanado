@@ -2,17 +2,49 @@
 
 \section{Metodolog\'ia}
 
-El desarrollo de MiGanado se abordar\'a mediante una metodolog\'ia iterativa e incremental. Esta elecci\'on resulta adecuada para un proyecto de software con requerimientos funcionales diversos, validaci\'on progresiva con usuarios del dominio y componentes t\'ecnicos que requieren experimentaci\'on, como los modelos de inteligencia artificial y el chatbot.
+El desarrollo de MiGanado se abordar\'a mediante una metodolog\'ia iterativa e incremental, orientada a construir un prototipo funcional por m\'odulos y a validar progresivamente las decisiones tomadas. Esta elecci\'on resulta adecuada para un proyecto de software con requerimientos diversos, usuarios con perfiles heterog\'eneos y funcionalidades que combinan gesti\'on operativa, alertas, inteligencia artificial, asistencia conversacional y uso en contextos rurales.
 
-El trabajo se organizar\'a en etapas. En primer lugar, se relevar\'an necesidades del dominio y se definir\'an requerimientos funcionales y no funcionales. Luego se dise\~nar\'a la arquitectura, el modelo de datos y los flujos principales. Posteriormente se implementar\'an los m\'odulos centrales de gesti\'on ganadera, roles, establecimientos y calendario. Finalmente, se integrar\'an los componentes de an\'alisis, asistencia inteligente y validaci\'on del prototipo.
+La metodolog\'ia propuesta permite avanzar desde un conjunto inicial de requerimientos hacia versiones sucesivas del sistema. Cada incremento incorporar\'a funcionalidades verificables, de modo que el equipo pueda revisar su comportamiento, detectar ajustes necesarios y relacionar los avances con los hallazgos del \emph{User Research}. Este enfoque evita concentrar toda la validaci\'on al final del proyecto y favorece la incorporaci\'on temprana de cambios derivados de entrevistas, encuestas o pruebas con usuarios representativos.
+
+\subsection{Enfoque metodol\'ogico}
+
+El enfoque iterativo e incremental se aplicar\'a mediante ciclos de an\'alisis, dise\~no, implementaci\'on, prueba y revisi\'on. En cada ciclo se seleccionar\'a un conjunto acotado de funcionalidades, se definir\'an criterios de aceptaci\'on, se desarrollar\'a una versi\'on operativa y se verificar\'a su adecuaci\'on al problema. La prioridad inicial estar\'a puesta en los m\'odulos que sostienen el funcionamiento b\'asico del sistema: usuarios, establecimientos, animales, lotes, eventos sanitarios y reproductivos.
+
+Una vez consolidados esos componentes, se avanzar\'a sobre funcionalidades de mayor complejidad, como alertas autom\'aticas, reportes, m\'odulo econ\'omico, chatbot, estimaciones asistidas por inteligencia artificial y sincronizaci\'on offline/online. Esta organizaci\'on responde a la necesidad de construir primero una base de datos consistente y luego utilizarla como insumo para servicios de an\'alisis y asistencia.
+
+\subsection{Etapas del desarrollo}
+
+El trabajo se organizar\'a en etapas complementarias. La primera etapa corresponder\'a al relevamiento y an\'alisis de requerimientos, a partir de la revisi\'on del dominio, entrevistas, encuestas y definici\'on de perfiles de usuario. La segunda etapa consistir\'a en el dise\~no funcional y t\'ecnico del prototipo, incluyendo modelo de datos, arquitectura, permisos, flujos principales e interfaces. La tercera etapa se orientar\'a al desarrollo incremental de los m\'odulos principales de gesti\'on ganadera. La cuarta etapa incorporar\'a funcionalidades de apoyo a la decisi\'on, alertas y componentes inteligentes. Finalmente, la quinta etapa estar\'a dedicada a pruebas, validaci\'on, documentaci\'on y ajustes finales.
+
+Estas etapas no se entienden como fases completamente aisladas. Los resultados del relevamiento podr\'an modificar prioridades de dise\~no, las pruebas podr\'an revelar mejoras necesarias en los flujos de carga y la validaci\'on con usuarios podr\'a ajustar el alcance de determinadas funcionalidades. Por ese motivo, la metodolog\'ia se plantea como un proceso flexible, pero guiado por objetivos y criterios de aceptaci\'on definidos.
+
+\subsection{Relevamiento y an\'alisis de requerimientos}
+
+El relevamiento tendr\'a como objetivo comprender las pr\'acticas actuales de gesti\'on en establecimientos bovinos de cr\'ia, identificar problemas frecuentes y reconocer restricciones reales de uso. Se considerar\'an tareas como el registro individual por caravana, la consulta de historiales, la gesti\'on de tratamientos, vacunaciones, tactos, sangrados, movimientos de lotes y seguimiento de indicadores productivos.
+
+Las entrevistas y encuestas se encuentran en proceso de realizaci\'on. Sus resultados completos ser\'an incorporados en la siguiente entrega, una vez que se disponga de respuestas suficientes, perfiles identificados y evidencia documental adecuada. Mientras tanto, los requerimientos se definir\'an a partir del alcance del proyecto, antecedentes relevados y supuestos iniciales que deber\'an ser validados con usuarios del dominio.
+
+El an\'alisis de requerimientos distinguir\'a entre funcionalidades esenciales del prototipo y funcionalidades deseables. Entre las esenciales se incluyen autenticaci\'on, roles, gesti\'on de establecimientos, registro de animales, eventos sanitarios y reproductivos, consulta de historiales y alertas b\'asicas. Entre las deseables o evolutivas se ubican estimaciones predictivas, chatbot, m\'odulo econ\'omico avanzado, an\'alisis de anomal\'ias y sincronizaci\'on completa offline/online.
+
+\subsection{Dise\~no funcional y t\'ecnico}
+
+El dise\~no funcional definir\'a los casos de uso principales, los perfiles de usuario y los recorridos necesarios para completar tareas frecuentes. Se priorizar\'a una experiencia simple, con formularios claros, validaciones comprensibles y acceso r\'apido a la informaci\'on cr\'itica del animal o establecimiento. Esta decisi\'on responde a que los usuarios previstos no necesariamente poseen formaci\'on t\'ecnica y pueden utilizar la aplicaci\'on durante jornadas de trabajo en campo.
+
+El dise\~no t\'ecnico contemplar\'a la separaci\'on entre interfaz de usuario, l\'ogica de negocio, persistencia y servicios inteligentes. Tambi\'en se definir\'an reglas de integridad para evitar duplicaci\'on de animales, inconsistencias de fechas, eventos incompletos o modificaciones no autorizadas. Para el soporte sin conexi\'on, el dise\~no deber\'a prever almacenamiento local de datos esenciales, registro de operaciones pendientes y sincronizaci\'on posterior con control de conflictos.
+
+\subsection{Desarrollo del prototipo funcional}
+
+El prototipo se desarrollar\'a de manera incremental. En una primera versi\'on se implementar\'an las entidades centrales y operaciones b\'asicas: alta, consulta, modificaci\'on y baja l\'ogica de animales, lotes, establecimientos y usuarios. Luego se agregar\'an eventos sanitarios y reproductivos, calendario, alertas y reportes. En versiones posteriores se incorporar\'an el m\'odulo econ\'omico, el chatbot y las funcionalidades de inteligencia artificial.
+
+Las funcionalidades de inteligencia artificial se integrar\'an como apoyo a la toma de decisiones y no como reemplazo del criterio profesional. Su desarrollo depender\'a de la disponibilidad y calidad de datos, por lo que inicialmente podr\'an implementarse reglas, estimaciones controladas o prototipos demostrativos. En todos los casos deber\'an explicitarse sus l\'imites, especialmente cuando se trate de salud animal, riesgos sanitarios o probabilidades reproductivas.
 
 \section{Arquitectura y tecnolog\'ias utilizadas}
 
-La arquitectura prevista ser\'a web, con separaci\'on entre interfaz de usuario, l\'ogica de negocio, persistencia de datos y servicios inteligentes. El sistema deber\'a permitir autenticaci\'on, control de permisos, administraci\'on multiestablecimiento y consulta eficiente de historiales individuales. La Figura~\ref{fig:architecture} presenta un placeholder del esquema que deber\'a reemplazarse por el diagrama definitivo.
+La arquitectura prevista corresponder\'a a una aplicaci\'on mobile orientada al uso en campo, con separaci\'on entre interfaz de usuario, l\'ogica de negocio, persistencia de datos y servicios inteligentes. Esta decisi\'on responde a las condiciones reales de trabajo en establecimientos rurales, donde muchas tareas se realizan directamente durante recorridas, controles sanitarios o actividades reproductivas. El sistema deber\'a permitir autenticaci\'on, control de permisos, administraci\'on multiestablecimiento y consulta eficiente de historiales individuales desde dispositivos m\'oviles. La Figura~\ref{fig:architecture} presenta un placeholder del esquema que deber\'a reemplazarse por el diagrama definitivo.
 
 \subsection{Capa de presentaci\'on}
 
-La capa de presentaci\'on ofrecer\'a las vistas para gestionar animales, lotes, calendarios, establecimientos, usuarios, reportes y consultas al chatbot. La interfaz deber\'a priorizar claridad, eficiencia y baja fricci\'on en tareas frecuentes.
+La capa de presentaci\'on ofrecer\'a vistas mobile para gestionar animales, lotes, calendarios, establecimientos, usuarios, reportes y consultas al chatbot. La interfaz deber\'a priorizar claridad, eficiencia y baja fricci\'on en tareas frecuentes, considerando que productores, veterinarios, administradores y empleados rurales podr\'an registrar y consultar informaci\'on desde dispositivos m\'oviles durante el trabajo en campo.
 
 \subsection{Capa de aplicaci\'on}
 
@@ -26,12 +58,34 @@ La capa de datos almacenar\'a establecimientos, usuarios, roles, animales, lotes
 
 Los servicios de inteligencia artificial se dise\~nar\'an como componentes acoplados de forma controlada al sistema principal. Esta separaci\'on permitir\'a evolucionar modelos, criterios de predicci\'on y fuentes de datos sin afectar la operaci\'on b\'asica de gesti\'on. Queda pendiente definir formalmente datasets, variables, m\'etricas y criterios de validaci\'on.
 
+\subsection{Uso previsto de datasets}
+
+En esta instancia no se declara un dataset definitivo para entrenamiento, prueba o validaci\'on de modelos predictivos. El uso de datasets se considera previsto para etapas posteriores, principalmente para estimaciones de peso, probabilidad de pre\~nez, alertas sanitarias, detecci\'on de anomal\'ias y proyecciones econ\'omicas. Antes de utilizar dichos datos deber\'an definirse su origen, permisos de uso, estructura, variables, criterios de limpieza, posibles sesgos y m\'etricas de evaluaci\'on.
+
+Si no se obtiene un volumen de datos suficiente o trazable, las funcionalidades inteligentes deber\'an limitarse a reglas heur\'isticas, reportes descriptivos o demostraciones controladas, dejando expl\'icitas sus limitaciones. Esta decisi\'on evita atribuir al prototipo una capacidad predictiva no validada.
+
 \section{Validaci\'on del sistema}
 
-La validaci\'on del sistema se realizar\'a en distintos niveles. En el nivel funcional, se verificar\'a que los usuarios puedan registrar animales, consultar historiales, administrar establecimientos, gestionar eventos sanitarios y reproductivos, configurar alertas y acceder a reportes. En el nivel de usabilidad, se evaluar\'a la claridad de los flujos principales con usuarios representativos del dominio. En el nivel t\'ecnico, se validar\'a la persistencia de datos, el control de permisos, la consistencia de reglas de negocio y el comportamiento de los componentes inteligentes.
+La validaci\'on del sistema se realizar\'a en distintos niveles para comprobar que el prototipo mobile responda al alcance definido y resulte \'util en el contexto de uso previsto. En el nivel funcional, se verificar\'a que los usuarios puedan registrar animales, consultar historiales, administrar establecimientos, gestionar eventos sanitarios y reproductivos, configurar alertas, acceder a reportes y utilizar las funciones principales sin interrupciones desde dispositivos m\'oviles. Estas pruebas se organizar\'an a partir de casos de uso representativos del dominio.
 
-Para las funcionalidades predictivas, la validaci\'on deber\'a contemplar la procedencia de los datos, la separaci\'on entre datos de entrenamiento y prueba, la interpretabilidad de los resultados y las limitaciones de uso. Las recomendaciones generadas por el sistema deber\'an presentarse como apoyo a la decisi\'on y no como diagn\'osticos veterinarios autom\'aticos.
+En el nivel de usabilidad, se evaluar\'a la claridad de los flujos principales con usuarios representativos, especialmente productores, veterinarios, administradores y empleados de campo. Se observar\'a si las pantallas permiten completar tareas frecuentes con una cantidad razonable de pasos, si el vocabulario utilizado resulta comprensible y si la informaci\'on cr\'itica puede consultarse r\'apidamente. Esta revisi\'on ser\'a importante para validar que la herramienta sea adecuada para usuarios no necesariamente t\'ecnicos.
+
+En el nivel t\'ecnico, se validar\'a la persistencia de datos, el control de permisos, la consistencia de reglas de negocio, la integridad de historiales y el comportamiento de los componentes inteligentes. Tambi\'en se revisar\'a la sincronizaci\'on offline/online mediante escenarios donde el usuario registre datos sin conexi\'on y luego recupere internet. En esos casos se deber\'a verificar que los datos se sincronicen correctamente, que no se pierdan operaciones y que las inconsistencias sean detectadas o resueltas de manera controlada.
+
+\subsection{Criterios de validaci\'on}
+
+Los criterios de validaci\'on del prototipo incluir\'an correcci\'on funcional, consistencia de datos, trazabilidad de eventos, claridad de uso, adecuaci\'on al dominio ganadero y estabilidad de las operaciones principales. Para cada m\'odulo se definir\'an casos de prueba vinculados con actividades reales, como registrar un animal, cargar una vacuna, programar una alerta reproductiva, consultar un historial veterinario, cambiar un animal de lote o generar un reporte b\'asico.
+
+Para las funcionalidades predictivas, la validaci\'on deber\'a contemplar la procedencia de los datos, la separaci\'on entre datos de entrenamiento y prueba, la interpretabilidad de los resultados y las limitaciones de uso. Si no se cuenta con datos suficientes para una evaluaci\'on formal, estas funcionalidades se presentar\'an como componentes preliminares o demostrativos. Las recomendaciones generadas por el sistema deber\'an mostrarse como apoyo a la decisi\'on y no como diagn\'osticos veterinarios autom\'aticos.
+
+La validaci\'on con usuarios se complementar\'a con una revisi\'on de consistencia documental entre objetivos, alcance, requerimientos, arquitectura y resultados del prototipo. De esta manera, la evaluaci\'on no se limitar\'a a comprobar que la aplicaci\'on funcione t\'ecnicamente, sino que tambi\'en analizar\'a si la soluci\'on construida responde al problema planteado y a las necesidades identificadas durante el relevamiento.
 
 \section{Cronograma preliminar}
 
 El cronograma de actividades se incluir\'a como anexo y deber\'a actualizarse durante el avance del proyecto. En esta versi\'on se deja una estructura preliminar basada en etapas de relevamiento, dise\~no, implementaci\'on, validaci\'on y documentaci\'on final.
+
+La planificaci\'on se mantiene como preliminar porque a\'un deben confirmarse fechas, disponibilidad de usuarios para entrevistas, definici\'on de datasets y alcance final de los componentes inteligentes. No obstante, las etapas propuestas guardan coherencia con el alcance del prototipo funcional y permiten ordenar el avance desde el relevamiento hasta la validaci\'on.
+
+\input{figures/architecture_placeholder.tex}
+\input{figures/workflow_placeholder.tex}
+\FloatBarrier
