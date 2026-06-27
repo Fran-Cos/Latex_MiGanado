@@ -2,11 +2,20 @@
 	\caption{Comparaci\'on funcional de aplicaciones de gesti\'on ganadera}
 	\label{tab:state-of-art}
 	\centering
-	\scriptsize
-	\resizebox{\textwidth}{!}{%
-	\begin{tabular}{|l|c|c|c|c|c|c|c|}
+	\footnotesize
+	\setlength{\tabcolsep}{2pt}
+	\renewcommand{\arraystretch}{1.45}
+	\begin{tabular}{|
+		>{\raggedright\arraybackslash}p{0.145\textwidth}|
+		>{\centering\arraybackslash}p{0.095\textwidth}|
+		>{\centering\arraybackslash}p{0.105\textwidth}|
+		>{\centering\arraybackslash}p{0.075\textwidth}|
+		>{\centering\arraybackslash}p{0.10\textwidth}|
+		>{\centering\arraybackslash}p{0.105\textwidth}|
+		>{\centering\arraybackslash}p{0.095\textwidth}|
+		>{\centering\arraybackslash}p{0.08\textwidth}|}
 		\hline
-		\textbf{Aplicaci\'on} & \textbf{Gesti\'on de ganado} & \textbf{Calendario integrado} & \textbf{Utiliza IA} & \textbf{An\'alisis predictivo} & \textbf{Detecci\'on de anomal\'ias} & \textbf{Asistente inteligente} & \textbf{Multiestablecimiento} \\
+		\textbf{Aplicaci\'on} & \textbf{Gesti\'on de ganado} & \shortstack{\textbf{Calendario}\\\textbf{integrado}} & \textbf{Utiliza IA} & \textbf{An\'alisis predictivo} & \textbf{Detecci\'on de anomal\'ias} & \textbf{Asistente inteligente} & \shortstack{\textbf{Multi-}\\\textbf{establec.}} \\
 		\hline
 		Albor Agro & S\'i & No & No & No & No & No & No \\
 		\hline
@@ -19,5 +28,4 @@
 		MiGanado & S\'i & S\'i & S\'i & S\'i & S\'i & S\'i & S\'i \\
 		\hline
 	\end{tabular}
-	}
 \end{table}
